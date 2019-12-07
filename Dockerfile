@@ -1,4 +1,4 @@
-FROM  node:12-alpine as yarn-install
+FROM  node:13-alpine as yarn-install
 WORKDIR /app
 COPY package.json yarn.lock ./
 RUN apk update && \
@@ -9,7 +9,7 @@ RUN apk update && \
     yarn cache clean
 
 # Stage 1
-FROM  node:12-alpine as react-build
+FROM  node:13-alpine as react-build
 WORKDIR /app
 COPY --from=yarn-install /app/node_modules /app/node_modules
 COPY . .
