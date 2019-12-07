@@ -13,6 +13,7 @@ FROM  node:12-alpine as react-build
 WORKDIR /app
 COPY --from=yarn-install /app/node_modules /app/node_modules
 COPY . .
+COPY .env.production .env
 RUN yarn build
 
 # Stage 2 - the production environment
