@@ -30,7 +30,7 @@
         "react-timeago": "^4.4.0",
         "react-tooltip": "^3.10.0",
         "recharts": "^1.6.2",
-        "redux": "^4.0.1",
+        "redux": "^4.0.5",
         "redux-thunk": "^2.3.0",
         "reselect": "^4.0.0",
         "sanitize.css": "^8.0.0",
